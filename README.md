@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# 프로젝트 2 React Version
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+하나의 웹사이트를 여러 가지 프레임워크를 사용하여 만들어 봅니다.
+<img src="./src/assets/img/main.png" alt="커버이미지" width="480" />
 
-## Available Scripts
+1. [vite](https://ko.vitejs.dev/)를 이용하여 사이트를 제작합니다.
+2. [react.js](https://ko.legacy.reactjs.org/)를 이용하여 사이트를 제작합니다.
+3. [vue.js](https://ko.vuejs.org/)를 이용하여 사이트를 제작합니다.
+4. [next.js](https://nextjs.org/)를 이용하여 사이트를 제작합니다.
 
-In the project directory, you can run:
+포트폴리오 컨셉의 사이트를 4가지 버전으로 반복하여 만들어 보면, 웹사이트의 일련의 제작과정을
+이해할 수 있고, 연습을 통해서 제작기법을 숙지할수 있고 다양한 방법을 사용하여
+흐름과 감각을 익히기 좋은 방법이라고 생각합니다.
 
-### `npm start`
+## 완성작 보기
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🐠미리보기 : https://
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ☠ 사용 스택 👻
 
-### `npm test`
+- ![React](https://img.shields.io/badge/-react-black?style=flat-square&logo=react&logoColor=white)
+  ![Gsap](https://img.shields.io/badge/-Gsap-tomato?style=flat-rounded&logo=Gsap)
+  ![Lenis](https://img.shields.io/badge/-Lenis-royalblue?style=flat-rounded&logo=Lenis&logoColor=white)
+  ![Vercel](https://img.shields.io/badge/-Vercel-black?style=flat-square&logo=Vercel)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- react(https://ko.legacy.reactjs.org/) 를 사용하여 사이트를 번들링하고 관리합니다.
+- gsap(https://greensock.com/gsap) 를 이용하여 패럴랙스 효과를 줍니다.
+- lenis(https://lenis.studiofreight.com/) 를 이용하여 스므스 효과를 구현합니다.
+- netlify(https://www.netlify.com/) 를 통해 사이트를 배포합니다.
+- git(https://github.com/) 을 사용하여 파일을 관리합니다.
+- HTML, CSS 기반으로 웹사이트의 기본 레이아웃 설계하고, 웹 표준 및 웹 접근성을 준수하여 작업합니다. [ARIA(Accessible Rich Internet Applications)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-### `npm run build`
+## 프로젝트 실행
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- react를 설치합니다. `npx create-react-app 타이틀`
+- react-router-dom을 설치합니다. `npm install react-router-dom`
+- sass를 설치합니다. `npm install sass`
+- gsap를 설치합니다. `npm install gsap`
+- lenis를 설치합니다. `npm install @studio-freight/lenis`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```javascript
+export default defineConfig({
+  build: {
+    outDir: "dist", // 빌드 결과물이 저장될 디렉터리 이름
+    emptyOutDir: true, // 기존 디렉터리를 비우고 새로 빌드
+  },
+});
+```
