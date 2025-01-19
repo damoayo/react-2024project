@@ -5,8 +5,7 @@
 
 1. [vite](https://ko.vitejs.dev/)를 이용하여 사이트를 제작합니다.
 2. [react.js](https://ko.legacy.reactjs.org/)를 이용하여 사이트를 제작합니다.
-3. [vue.js](https://ko.vuejs.org/)를 이용하여 사이트를 제작합니다.
-4. [next.js](https://nextjs.org/)를 이용하여 사이트를 제작합니다.
+3. [next.js](https://nextjs.org/)를 이용하여 사이트를 제작합니다.
 
 포트폴리오 컨셉의 사이트를 4가지 버전으로 반복하여 만들어 보면, 웹사이트의 일련의 제작과정을
 이해할 수 있고, 연습을 통해서 제작기법을 숙지할수 있고 다양한 방법을 사용하여
