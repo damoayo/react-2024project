@@ -35,6 +35,17 @@ const Site = () => {
         "use stack : HTML5/CSS3, Scss Variable, next.js",
       ],
     },
+    {
+      text: ["make", "site compliant with", "next.js"],
+      title: "넥스트를 이용한 사이트 제작",
+      code: "https://github.com/damoayo/react-2024project",
+      view: "https://port2023-react.netlify.app",
+      info: [
+        "site coding",
+        "production period : two days",
+        "use stack : HTML5/CSS3, Scss Variable, next.js",
+      ],
+    },
   ];
 
   return (

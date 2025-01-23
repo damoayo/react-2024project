@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import port from "../constants/index";
+
 import port01 from "../assets/img/port01.jpg";
 import port02 from "../assets/img/port02.jpg";
 import port03 from "../assets/img/port03.jpg";
@@ -9,29 +11,6 @@ import port07 from "../assets/img/port07.jpg";
 import port08 from "../assets/img/port08.jpg";
 import port09 from "../assets/img/port09.jpg";
 import port10 from "../assets/img/port10.jpg";
-
-/* import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-export default function port() {
-    gsap.registerPlugin(ScrollTrigger);
-    const horSection = gsap.utils.toArray(".port__item");
-
-    gsap.to(horSection, {
-        xPercent: -120 * (horSection.length - 1),
-        ease: "none",
-        scrollTrigger: {
-            trigger: "#port",
-            start: "top 56px",
-            end: "+=3000",
-            pin: true,
-            scrub: 1,
-            markers: false,
-            invalidateOnRefresh: true,
-            anticipatePin: 1,
-        },
-    });
-} */
 
 const portText = [
   {
@@ -127,28 +106,32 @@ const portText = [
 ];
 
 const Port = () => {
+  const portRef = useRef(null); // DOM 참조를 위한 useRef
+  useEffect(() => {
+    port();
+  }, []);
   return (
-    <section id="port">
+    <section id="port" ref={portRef}>
       <div className="port__inner">
         <div className="port__title">
           portfolio <em>포폴 작업물</em>
         </div>
         <div className="port__wrap">
-          {portText.map((port, key) => (
+          {portText.map((item, key) => (
             <article className={`port__item p${key + 1}`} key={key}>
-              <span className="num">{port.num}.</span>
+              <span className="num">{item.num}.</span>
               <a
-                href={port.code}
+                href={item.code}
                 target="_blank"
                 className="img"
                 rel="noreferrer"
               >
-                <img src={port.img} alt={port.name} />
+                <img src={item.img} alt={item.name} />
               </a>
-              <h3 className="title">{port.title}</h3>
-              <p className="desc">{port.desc}</p>
+              <h3 className="title">{item.title}</h3>
+              <p className="desc">{item.desc}</p>
               <a
-                href={port.view}
+                href={item.view}
                 target="_blank"
                 className="site"
                 rel="noreferrer"
